@@ -14,17 +14,20 @@
         <u><h1> Registration </h1></u> 
         <fieldset>
 
-          <legend><span class="number">1</span> Your Basic Info</legend>
+          <legend><h1>Basic Information</h1></legend>
         
           <label for="name">Name:</label>
-          <input type="text" id="name" name="user_name">
+          <input type="text" id="name" name="user_name"  placeholder=" Enter your name ..." autofocus="">
+          <br/><br/>
         
           <label for="email">Email:</label>
-          <input type="email" id="mail" name="user_email">
-       
+          <input type="email" id="mail" name="user_email" required placeholder="Enter your Email...">
+          <br/><br/>
+
           <label for="password">Password:</label>
-          <input type="password" id="password"       name="user_password">
-        
+          <input type="password" id="password" name="user_password" placeholder="Enter your password...">
+          <br/><br/>
+
           <label>Age:</label>
           <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>
           <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">Over 13</label>
@@ -35,18 +38,35 @@
              <option value="Female">Female</option>
              <option value="Other">Other</option>
              </select>
-            </form>
+             <br/><br/>
+             <p>Favourite Color</p>
+             color : <input type="Color" name="color"/>
+           <style>
+            body {
+              background-color: ghostwhite;
+              color: rgb(37, 33, 42) ;
+            }
+            h1 {
+              color: rgb(49, 44, 56);
+            }
+           </style>
           
         </fieldset>
         <fieldset>  
         
-          <legend><span class="number">2</span> Your Profile</legend>
-          
+          <legend><h1>Professional Information</h1></legend>
          <label for="bio">Bio:</label>
           <textarea id="bio" name="user_bio"></textarea>
+          <br/><br/>
+          Experience :
+          <input type="number" name="number" min="3" max="12"/>
         
-       
-        
+          <br/><br/>
+        Current Status:
+          <input type="radio" name="radio">Senior
+          <input type="radio" name="radio">Junior
+          <input type="radio" name="radio">Learning
+        <br/><br/>
          <label for="job">Job Role:</label>
           <select id="job" name="user_job">
             <optgroup label="Web">
@@ -65,14 +85,18 @@
               <option value="freelancer">Freelancer</option>
             </optgroup>
           </select>
-          <br>
+          <br/><br/>
           <label>Interests:</label><br>
           <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Development</label><br>
           <input type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light" for="design">Design</label><br>
           <input type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business">Business</label>
-         </fieldset>
-       <br><br><br>
-        <button type="submit">Sign Up</button>
+          <br/><br/>
+          Range:
+          <input type="Range" name="Range" min="10" max="200">
+        </fieldset>
+       <br/><br/>
+      <input type="Submit" value="Submit"/>
+      <input type="reset" value="Reset"/>
        </form>
 </body>
 </html>
